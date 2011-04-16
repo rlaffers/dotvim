@@ -314,5 +314,8 @@ nmap <silent> ,/ :nohlsearch<CR>
 " Sudo save after file has been opened by a regular user
 cmap w!! w !sudo tee % >/dev/null
 
-
+" PhpDocumentor
+let g:pdv_cfg_Author = "Richard Laffers <rlaffers@gmail.com>"
+let g:pdv_cfg_Copyright = "Copyright 2011 Richard Laffers"
+let g:pdv_cfg_License = "The MIT License {@link http://www.opensource.org/licenses/mit-license.php}"
 

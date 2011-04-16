@@ -10,9 +10,6 @@
 [submodule "bundle/minibufexpl"]
 	path = bundle/minibufexpl
 	url = https://github.com/fholgado/minibufexpl.vim.git
-[submodule "bundle/phpdocumentor"]
-	path = bundle/phpdocumentor
-	url = https://github.com/vim-scripts/PDV--phpDocumentor-for-Vim.git
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = https://github.com/msanders/snipmate.vim.git
@@ -34,3 +31,6 @@
 [submodule "bundle/manpageview"]
 	path = bundle/manpageview
 	url = https://github.com/vim-scripts/ManPageView.git
+[submodule "bundle/phpdocumentor"]
+	path = bundle/phpdocumentor
+	url = https://github.com/vim-scripts/PDV--phpDocumentor-for-Vim.git
