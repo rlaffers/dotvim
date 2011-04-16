@@ -1,0 +1,58 @@
+#!/bin/bash
+# Parameters:
+
+function usage()
+{
+    cat <<EOF
+    usage: $0 options
+    
+    This script builds a ctags list from the specified directory.
+
+    OPTIONS:
+      -h  Show this message
+      -d  Path to directory to parse
+      -n  Project name
+
+EOF
+}
+
+DIR=
+NAME=
+while getopts ":hd:n:" OPTION
+do
+    case $OPTION in
+        h)
+            usage
+            exit 1
+            ;;
+        d)
+            DIR=$OPTARG
+            ;;
+        n)
+            NAME=$OPTARG
+            ;;
+        ?)
+            usage
+            exit
+            ;;
+    esac
+done
+
+if [[ -z "$DIR" ]];
+then
+    usage
+    exit 1
+fi
+
+if [[ -z "$NAME" ]];
+then
+    NAME=_default
+fi
+
+echo -e "\033[32;1mBuilding ctags...\033[0m\n"
+cd $DIR
+#exec ctags-exuberant -f ~/.vim/mytags/$NAME -h ".php" -R --totals=yes --tag-relative=yes --PHP-kinds=+cf --regex-PHP='/abstract\s+class\s+([^ ]+)/\1/c/' --regex-PHP='/interface\s+([^ ]+)/\1/c/' --regex-PHP='/(public\s+|static\s+|abstract\s+|protected\s+|private\s+)function\s+\&?\s*([^ (]+)/\2/f/'
+
+exec ctags-exuberant -f ./$NAME -h ".php" -R --totals=yes --tag-relative=yes --PHP-kinds=+cf --regex-PHP='/abstract\s+class\s+([^ ]+)/\1/c/' --regex-PHP='/interface\s+([^ ]+)/\1/c/' --regex-PHP='/(public\s+|static\s+|abstract\s+|protected\s+|private\s+)function\s+\&?\s*([^ (]+)/\2/f/'
+
+echo "New taglist was created: $project_name"
