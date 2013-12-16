@@ -1,0 +1,1 @@
+Path directory is hard-coded in the bash-support plugin, therefore it can't dwell under the budnle/bash-support/ directory where the rest of this plugin resides.

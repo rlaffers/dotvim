@@ -1,0 +1,19 @@
+§
+§ =============================================================
+§ ========== USER MACROS ======================================
+§ =============================================================
+§
+|AUTHOR|    = Richard Laffers 
+|AUTHORREF| = 
+|EMAIL|     = rlaffers@gmail.com
+|COMPANY|   = 
+|COPYRIGHT| = Copyright (c) |YEAR|, |Richard Laffers|
+§
+§ =============================================================
+§ ========== FILE INCLUDES ====================================
+§ =============================================================
+§
+|includefile| = bash.comments.template
+|includefile| = bash.statements.template
+|includefile| = bash.paramsub.template
+§
